@@ -10,15 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_20_022956) do
+ActiveRecord::Schema.define(version: 2022_10_23_213626) do
+
+  create_table "budgets", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "total_income"
+    t.integer "balances"
+    t.integer "expenses_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "total_expenses"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "home_expenses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "mortgage_rent"
+    t.integer "electric"
+    t.integer "gas"
+    t.integer "water_sewer_trash"
+    t.integer "internet_cable"
+    t.integer "home_supplies"
+    t.integer "home_repairs"
+    t.integer "total_home_expenses"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "incomes", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "income_input1"
     t.integer "income_input2"
     t.integer "total_income"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "living_expenses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "clothing"
+    t.integer "cell_phone"
+    t.integer "hair_personal_care"
+    t.integer "child_care"
+  end
+
+  create_table "transportation_expenses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "gas"
+    t.integer "tolls_fares"
+    t.integer "auto_repairs"
+    t.integer "total_transport_expenses"
   end
 
   create_table "users", force: :cascade do |t|
