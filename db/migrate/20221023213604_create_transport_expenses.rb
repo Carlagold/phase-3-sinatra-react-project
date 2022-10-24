@@ -1,6 +1,6 @@
 class CreateTransportExpenses < ActiveRecord::Migration[6.1]
   def change
-    create_table :transportation_expenses do |t|
+    create_table :transport_expenses do |t|
       t.integer :user_id
       t.integer :gas
       t.integer :tolls_fares

@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2022_10_23_213626) do
     t.integer "child_care"
   end
 
-  create_table "transportation_expenses", force: :cascade do |t|
+  create_table "transport_expenses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "gas"
     t.integer "tolls_fares"
