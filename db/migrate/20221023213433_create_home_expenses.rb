@@ -1,7 +1,7 @@
 class CreateHomeExpenses < ActiveRecord::Migration[6.1]
   def change
     create_table :home_expenses do |t|
-    t.integer :user_id
+    t.integer :user_id, null: false, foreign_key: true
     t.integer :mortgage_rent
     t.integer :electric
     t.integer :gas

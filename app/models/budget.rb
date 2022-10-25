@@ -1,5 +1,6 @@
 class Budget < ActiveRecord::Base 
-has_one :incomes
-has_one :expenses
+belongs_to :incomes
+belongs_to :expenses 
+belongs_to :users
 
 end

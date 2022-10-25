@@ -23,13 +23,13 @@ ActiveRecord::Schema.define(version: 2022_10_23_213626) do
 
   create_table "expenses", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "total_expenses"
+    t.integer "total_expenses", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "home_expenses", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.integer "mortgage_rent"
     t.integer "electric"
     t.integer "gas"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 2022_10_23_213626) do
     t.integer "cell_phone"
     t.integer "hair_personal_care"
     t.integer "child_care"
+    t.integer "total_living_expenses"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "transport_expenses", force: :cascade do |t|
@@ -65,6 +68,8 @@ ActiveRecord::Schema.define(version: 2022_10_23_213626) do
     t.integer "tolls_fares"
     t.integer "auto_repairs"
     t.integer "total_transport_expenses"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,3 @@
+class UserController <ApplicationController
+  post "/"
+end

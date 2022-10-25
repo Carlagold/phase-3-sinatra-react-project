@@ -6,6 +6,8 @@ class CreateLivingExpenses < ActiveRecord::Migration[6.1]
       t.integer :cell_phone
       t.integer :hair_personal_care
       t.integer :child_care
+      t.integer :total_living_expenses
+      t.timestamps
     end
   end
 end

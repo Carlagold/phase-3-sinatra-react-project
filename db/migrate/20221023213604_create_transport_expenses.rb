@@ -6,6 +6,7 @@ class CreateTransportExpenses < ActiveRecord::Migration[6.1]
       t.integer :tolls_fares
       t.integer :auto_repairs
       t.integer :total_transport_expenses
+      t.timestamps
     end
   end
 end
