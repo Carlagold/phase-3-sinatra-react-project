@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_23_213626) do
+ActiveRecord::Schema.define(version: 2022_10_27_045427) do
 
   create_table "budgets", force: :cascade do |t|
     t.integer "user_id"
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(version: 2022_10_23_213626) do
     t.integer "total_living_expenses"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "monthly_budgets", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "income_id"
+    t.integer "expense_id"
+    t.integer "home_expense_id"
+    t.integer "living_expense_id"
+    t.integer "transport_expense_id"
+    t.integer "budget_id"
   end
 
   create_table "transport_expenses", force: :cascade do |t|

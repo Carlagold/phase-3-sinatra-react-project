@@ -1,11 +1,12 @@
-puts "🌱 Seeding spices..."
+puts '🌱 Seeding spices...'
 
 # Seed your database here
 
-user_1 = User.create(first_name: "Fabricio", last_name: "TS", username: "thegamer", password: "&YXQg2qRj")
-user_2 = User.create(first_name: "Franco", last_name: "FS", username: "dogecoin", password: "4Z#^YrnPX")
-user_3 = User.create(first_name: "Andre", last_name: "FS", username: "todamoon", password: "vXU7Nv^au")
+user_1 = User.create(first_name: 'Fabricio', last_name: 'TS', username: 'thegamer', password: '&YXQg2qRj')
+user_2 = User.create(first_name: 'Franco', last_name: 'FS', username: 'dogecoin', password: '4Z#^YrnPX')
+user_3 = User.create(first_name: 'Andre', last_name: 'FS', username: 'todamoon', password: 'vXU7Nv^au')
 Income.create(income_input1: 6759, income_input2: 4210, user_id: user_1.id)
+# binding.pry
 Income.create(income_input1: 3150, income_input2: 1622,  user_id: user_2.id)
 Income.create(income_input1: 3645, income_input2: 2891,  user_id: user_3.id)
 HomeExpense.create(mortgage_rent: 2645, electric: 240, gas: 210, water_sewer_trash: 320, internet_cable: 150, home_supplies: 180, home_repairs: 423, user_id: user_1.id)
@@ -18,5 +19,4 @@ LivingExpense.create(clothing: 280, cell_phone: 280, hair_personal_care: 350, ch
 LivingExpense.create(clothing: 150, cell_phone: 190, hair_personal_care: 264, child_care: 0, user_id: user_2.id)
 LivingExpense.create(clothing: 300, cell_phone: 90, hair_personal_care: 190, child_care: 550, user_id: user_3.id)
 
-
-puts "✅ Done seeding!"
+puts '✅ Done seeding!'
